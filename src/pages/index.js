@@ -1,22 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
+import Box from '@material-ui/core/Box';
+import QueryPost from './queryPost'
+import QuerySecond from  './querySecond'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+const IndexPage=()=>{
+  return(
+    <>
+     <Box style={{ textAlign: 'center', marginTop:'1em'}}>
+      <img alt="" src="https://avatars.githubusercontent.com/u/75025115?s=460&u=a3c407ef44ca0e0ac7bb597514e39db168594180&v=4" style={{ borderRadius: '50%', width:'5em'}}/>
+     </Box>
+    <div style={{textAlign:'center'}}>
+    <mark>un exemple  en utilisant l api createPages et contentful  <br />
+    avec des multiquesQueries dans gatsby-node.js 
+    </mark>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+    <QueryPost />
+    <QuerySecond />
+    </>
+  )
+}
 
 export default IndexPage
